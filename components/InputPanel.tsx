@@ -4,7 +4,9 @@ interface InputPanelProps {
   notes: string;
   isGenerating: boolean;
   errorMessage?: string;
+  mode: "mock" | "api";
   onNotesChange: (value: string) => void;
+  onModeChange: (value: "mock" | "api") => void;
   onGenerate: () => void;
 }
 
@@ -12,7 +14,9 @@ export default function InputPanel({
   notes,
   isGenerating,
   errorMessage,
+  mode,
   onNotesChange,
+  onModeChange,
   onGenerate,
 }: InputPanelProps) {
   const isDisabled = isGenerating || notes.trim().length === 0;
@@ -20,6 +24,30 @@ export default function InputPanel({
   return (
     <section className="w-full rounded-xl border border-zinc-200 bg-white p-4 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
       <h2 className="mb-2 text-lg font-semibold text-zinc-900 dark:text-zinc-100">Meeting Notes</h2>
+      <div className="mb-3 flex items-center gap-4 text-sm text-zinc-700 dark:text-zinc-300">
+        <label className="flex items-center gap-1">
+          <input
+            type="radio"
+            name="mode"
+            value="mock"
+            checked={mode === "mock"}
+            disabled={isGenerating}
+            onChange={() => onModeChange("mock")}
+          />
+          Mock
+        </label>
+        <label className="flex items-center gap-1">
+          <input
+            type="radio"
+            name="mode"
+            value="api"
+            checked={mode === "api"}
+            disabled={isGenerating}
+            onChange={() => onModeChange("api")}
+          />
+          API
+        </label>
+      </div>
       <textarea
         value={notes}
         onChange={(event) => onNotesChange(event.target.value)}
