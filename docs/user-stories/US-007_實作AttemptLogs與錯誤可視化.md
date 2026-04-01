@@ -13,10 +13,10 @@
   - success / fail 樣式區分
 
 **驗收條件**：
-- [ ] 每次重試皆新增一筆記錄
-- [ ] `ParseError` / `SchemaError` 顯示不同文案或標記
-- [ ] 成功時可顯示成功 attempt
-- [ ] 無 logs 時顯示空狀態提示
+- [x] 每次重試皆新增一筆記錄
+- [x] `ParseError` / `SchemaError` 顯示不同文案或標記
+- [x] 成功時可顯示成功 attempt
+- [x] 無 logs 時顯示空狀態提示
 
 **依賴關係**：
 - 需先完成：`US-001_定義核心型別與Schema.md`
@@ -24,3 +24,5 @@
 
 **優先級**：P0  
 **相關功能對應**：Attempt logs、錯誤可觀測性
+
+**狀態**：Done（2026-04-01）
