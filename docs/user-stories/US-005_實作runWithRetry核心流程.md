@@ -14,11 +14,11 @@
   - `runWithRetry(params): Promise<{ ok: true; content: ContentPack; attempts: AttemptLog[] } | { ok: false; attempts: AttemptLog[]; lastRaw?: string }>`
 
 **驗收條件**：
-- [ ] 成功時回傳 `ContentPack` 與 attempts 記錄
-- [ ] 失敗時回傳完整 attempts 與最後 raw
-- [ ] 每次失敗都標記 `ParseError` 或 `SchemaError`
-- [ ] 嘗試次數不超過 `maxAttempts`
-- [ ] 可以切換 loose/strict 策略（例如 1~2 loose，3+ strict）
+- [x] 成功時回傳 `ContentPack` 與 attempts 記錄
+- [x] 失敗時回傳完整 attempts 與最後 raw
+- [x] 每次失敗都標記 `ParseError` 或 `SchemaError`
+- [x] 嘗試次數不超過 `maxAttempts`
+- [x] 可以切換 loose/strict 策略（例如 1~2 loose，3+ strict）
 
 **依賴關係**：
 - 需先完成：`US-002_實作輸出驗證器與錯誤格式化.md`
@@ -27,3 +27,5 @@
 
 **優先級**：P0  
 **相關功能對應**：Retry 策略、主要流程
+
+**狀態**：Done（2026-04-01）

@@ -13,13 +13,15 @@
   - `parseJsonSafely(raw: string): { ok: true; data: unknown } | { ok: false; errorType: "ParseError"; message: string }`
 
 **驗收條件**：
-- [ ] 純 JSON 字串可正確 parse
-- [ ] 前後含雜訊時可抽出 JSON 並 parse
-- [ ] 找不到 `{` / `}` 時回傳 `ParseError`
-- [ ] JSON 語法錯誤時回傳 `ParseError` 且含原始錯誤訊息
+- [x] 純 JSON 字串可正確 parse
+- [x] 前後含雜訊時可抽出 JSON 並 parse
+- [x] 找不到 `{` / `}` 時回傳 `ParseError`
+- [x] JSON 語法錯誤時回傳 `ParseError` 且含原始錯誤訊息
 
 **依賴關係**：
 - 無（可與 US-001 並行）
 
 **優先級**：P0  
 **相關功能對應**：Parse + Extract、前後雜訊處理
+
+**狀態**：Done（2026-04-01）
