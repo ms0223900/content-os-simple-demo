@@ -21,14 +21,16 @@
   - JSON Schema 物件（AJV 可直接驗證）
 
 **驗收條件**：
-- [ ] `ContentPack` 與 PRD 欄位完全一致
-- [ ] `blog.outline` 型別為 `string[]`
-- [ ] Schema required 欄位完整
-- [ ] Schema 可被 AJV 正常載入
-- [ ] 沒有多餘或未定義欄位（若有需明確宣告允許）
+- [x] `ContentPack` 與 PRD 欄位完全一致
+- [x] `blog.outline` 型別為 `string[]`
+- [x] Schema required 欄位完整
+- [x] Schema 可被 AJV 正常載入
+- [x] 沒有多餘或未定義欄位（若有需明確宣告允許）
 
 **依賴關係**：
 - 無（起始任務）
 
 **優先級**：P0  
 **相關功能對應**：Schema 規則、資料結構設計
+
+**狀態**：Done（2026-04-01）
